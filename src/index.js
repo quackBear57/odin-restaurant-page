@@ -5,29 +5,30 @@ import { loadAbout } from "./about.js";
 
 loadHome();
 
-const divContent = document.querySelector('#content');
+
 
 const btnHome = document.querySelector("#btnHome");
 const btnMenu = document.querySelector("#btnMenu");
 const btnAbout = document.querySelector("#btnAbout");
 
-btnHome.addEventListener('click', () => {
+function clearDivContent() {
+    const divContent = document.querySelector('#content');
     while (divContent.firstChild) {
         divContent.removeChild(divContent.firstChild);
     }
+}
+
+btnHome.addEventListener('click', () => {
+    clearDivContent();
     loadHome();
 });
 
 btnMenu.addEventListener('click', () => {
-    while (divContent.firstChild) {
-        divContent.removeChild(divContent.firstChild);
-    }
+    clearDivContent();
     loadMenu();
 });
 
 btnAbout.addEventListener('click', () => {
-    while (divContent.firstChild) {
-        divContent.removeChild(divContent.firstChild);
-    }
+    clearDivContent();
     loadAbout();
 });
