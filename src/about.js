@@ -1,9 +1,5 @@
 export const loadAbout = () => {
-    const contentDiv = document.querySelector('#content');
-
-    while (contentDiv.firstChild) {
-        contentDiv.removeChild(contentDiv.firstChild);
-    }
+    const divContent = document.querySelector('#content');
 
     const h1Name = document.createElement('h1');
     h1Name.textContent = 'About Us';
@@ -15,6 +11,6 @@ export const loadAbout = () => {
     pContent.textContent = 'We are a fake restaurant that has a project page being built for us!! Like and Subscribe!';
     divText.appendChild(pContent);
 
-    contentDiv.appendChild(h1Name);
-    contentDiv.appendChild(divText);
+    divContent.appendChild(h1Name);
+    divContent.appendChild(divText);
 }

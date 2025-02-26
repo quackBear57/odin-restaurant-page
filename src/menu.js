@@ -1,9 +1,5 @@
 export const loadMenu = () => {
-    const contentDiv = document.querySelector('#content');
-
-    while (contentDiv.firstChild) {
-        contentDiv.removeChild(contentDiv.firstChild);
-    }
+    const divContent = document.querySelector('#content');
 
     const h1Name = document.createElement('h1');
     h1Name.textContent = 'Food Menu';
@@ -19,6 +15,6 @@ export const loadMenu = () => {
     }
     divText.appendChild(ulMenu);
 
-    contentDiv.appendChild(h1Name);
-    contentDiv.appendChild(divText);
+    divContent.appendChild(h1Name);
+    divContent.appendChild(divText);
 }
